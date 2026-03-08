@@ -1,0 +1,38 @@
+// ========== Kolory – zmień tylko tutaj, reszta się dostosuje ==========
+$color-primary: #0d9488;
+$color-primary-dark: #0f766e;
+$color-primary-light: #2dd4bf;
+
+$color-text: #1e293b;
+$color-text-muted: #64748b;
+$color-bg: #f1f5f9;
+$color-bg-dark: #0f172a;
+$color-white: #ffffff;
+$color-border: #e2e8f0;
+$color-error: #dc2626;
+
+// Breakpointy
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1200px;
+
+// Spacing
+$space-xs: 0.5rem;
+$space-sm: 1rem;
+$space-md: 1.5rem;
+$space-lg: 2rem;
+$space-xl: 3rem;
+$space-2xl: 4rem;
+$space-3xl: 6rem;
+
+// Border radius
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-full: 9999px;
+
+// Transitions
+$transition-fast: 0.15s ease;
+$transition-base: 0.25s ease;
+$transition-slow: 0.4s ease;

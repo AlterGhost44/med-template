@@ -1,0 +1,45 @@
+// ============================================================
+// Klasy uniwersalne – używaj w całym projekcie dla spójności
+// ============================================================
+
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ---- Kontener (max-width + wycentrowanie + padding) ----
+.container {
+  @include container;
+}
+
+// ---- Opcjonalne klasy sekcji (HTML: section class="section section--white") ----
+.section--white {
+  @extend %section-base;
+  background: $color-white;
+}
+
+.section--alt {
+  @extend %section-base;
+  background: $color-bg;
+}
+
+// ---- Wewnętrzny wrapper sekcji (kontener) ----
+.section__inner {
+  @include container;
+}
+
+// ---- Dostępność: ukrycie wizualne (np. nagłówki dla screen readerów) ----
+.visually-hidden {
+  @include visually-hidden;
+}
+
+// ---- Tekst ----
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: $color-text-muted;
+}
+
+.text-primary {
+  color: $color-primary;
+}

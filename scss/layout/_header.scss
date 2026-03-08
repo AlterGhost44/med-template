@@ -1,0 +1,192 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// ========== Header / Navbar – układ ==========
+.header {
+  max-width: 100%;
+  padding: 0.5rem 1rem 0.5rem 0.5rem;
+  background: $color-white;
+  box-shadow: 0 1px 0 rgba($color-text, 0.06);
+}
+
+.nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  min-height: 56px;
+}
+
+.logo img,
+img.logo {
+    display: block;
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.menu-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 26px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 9px;
+  margin: -9px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+  box-sizing: content-box;
+}
+
+.menu-button span {
+  display: block;
+  width: 26px;
+  height: 3px;
+  border-radius: 2px;
+  transition: transform var(--ease), opacity var(--ease);
+  transform-origin: 50% 50%;
+  background: $color-bg-dark;
+}
+
+// X: oba paski do środka i obrót – 3px+5+3+5+3 = 19px, środek 9.5px
+.menu-button.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+  background: $color-white;
+}
+
+.menu-button.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-button.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+  background: $color-white;
+}
+
+// ========== Menu mobilne – układ ==========
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  transform: translateX(100%);
+  transition: transform var(--ease);
+  z-index: 1000;
+  background: rgba($color-bg-dark, 0.98);
+  color: $color-white;
+  padding: $space-2xl $space-xl;
+}
+
+.mobile-nav a {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: $color-white;
+  padding: $space-sm $space-lg;
+  border-radius: $radius-md;
+  text-align: center;
+  width: 100%;
+  max-width: 280px;
+  box-sizing: border-box;
+}
+
+.mobile-nav a:not(.btn)[aria-current="page"] {
+  background: $color-primary-dark;
+  color: $color-white;
+}
+
+.mobile-nav.active {
+  transform: translateX(0);
+}
+
+.menu-desktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 0.5rem 1rem;
+}
+
+.nav-container {
+    min-height: 72px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.menu-button {
+  display: none;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+.menu-desktop {
+  display: flex;
+  flex-direction: row;
+  gap: $space-xl;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+// Linki tekstowe w nav desktop – hover i active tylko na desktopie
+.menu-desktop__link {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: $color-text;
+  padding: $space-sm $space-md;
+  text-decoration: none;
+  position: relative;
+  border-radius: $radius-sm;
+  transition: color $transition-base, background $transition-base;
+}
+
+.menu-desktop__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  background: $color-primary;
+  border-radius: $radius-full;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform $transition-base;
+}
+
+.menu-desktop__link:hover {
+  color: $color-primary;
+  background: rgba($color-primary, 0.08);
+}
+
+.menu-desktop__link:hover::after {
+  transform: scaleX(1);
+}
+
+.menu-desktop__link[aria-current="page"] {
+  color: $color-primary;
+  background: rgba($color-primary, 0.12);
+  font-weight: 700;
+}
+
+.menu-desktop__link[aria-current="page"]::after {
+  transform: scaleX(1);
+  height: 3px;
+}
+
+.logo img, img.logo {
+  height: 100px;
+  }
+}

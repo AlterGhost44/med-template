@@ -1,0 +1,125 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.section-hero {
+  min-width: 90vw;
+}
+
+.section-hero .content-box {
+  gap: $space-xl;
+}
+.process__steps {
+  display: grid;
+  gap: $space-2xl;
+  position: relative;
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: $space-xl;
+  }
+}
+  
+  .process__step:nth-child(n) {
+  background: $color-white;
+}
+
+.process__steps::before {
+  content: "";
+  position: absolute;
+  left: 48px;
+  right: 48px;
+  top: 48px;
+  height: 2px;
+  background: linear-gradient(to right, $color-primary 0%, rgba($color-primary, 0.3) 100%);
+  z-index: 0;
+}
+
+.process__step {
+  position: relative;
+  text-align: center;
+  padding: $space-lg;
+  background: $color-bg;
+  border-radius: $radius-lg;
+  border: 2px solid rgba($color-primary-dark, 0.25);
+  transition: all $transition-base;
+}
+
+.process__step:hover {
+  border-color: $color-primary;
+  box-shadow: 0 8px 24px rgba($color-primary, 0.12);
+}
+
+.process__step-number {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto $space-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $color-primary;
+  color: $color-white;
+  font-weight: 800;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+  
+  .process__step h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  }
+  
+  .process__step p {
+  font-size: 0.875rem;
+  margin: 0;
+  }
+  
+  .process__cta {
+  text-align: center;
+  margin-top: $space-2xl;
+}
+
+// ========== Sekcja Opinie ==========
+#opinions {
+  background: $color-bg;
+}
+
+#opinions .content-box {
+  max-width: 52ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#opinions .grid-3 {
+  gap: $space-xl;
+  @include respond-to(desktop) {
+    gap: $space-2xl;
+  }
+}
+
+#opinions .grid-3 > div:last-child {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  padding-top: $space-md;
+}
+
+#opinions .card {
+  text-align: center;
+  border-top: 3px solid rgba($color-primary, 0.4);
+}
+
+#opinions .card h3 {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  color: $color-primary;
+  margin-bottom: $space-sm;
+}
+
+#opinions .card p {
+  font-size: 0.9375rem;
+  color: $color-text-muted;
+}
+
+#opinions .card:hover {
+  border-top-color: $color-primary;
+}

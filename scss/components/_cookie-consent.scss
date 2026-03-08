@@ -1,0 +1,60 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+// Baner zgody na cookies – na dole ekranu, nad footerem
+.cookie-consent {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: $space-lg;
+  background: $color-white;
+  box-shadow: 0 -4px 24px rgba($color-text, 0.12);
+  border-top: 1px solid rgba($color-text, 0.08);
+}
+
+.cookie-consent[hidden],
+html[data-cookie-consent="accepted"] .cookie-consent,
+html[data-cookie-consent="rejected"] .cookie-consent {
+  display: none;
+}
+
+.cookie-consent__inner {
+  max-width: $bp-wide;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+  @include respond-to(desktop) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: $space-xl;
+  }
+}
+
+.cookie-consent__text {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: $color-text-muted;
+  line-height: 1.5;
+  @include respond-to(desktop) {
+    font-size: 1rem;
+    max-width: 60ch;
+  }
+}
+
+.cookie-consent__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $space-sm;
+}
+
+.cookie-consent__btn {
+  flex: 1;
+  min-width: 140px;
+  @include respond-to(desktop) {
+    flex: none;
+  }
+}

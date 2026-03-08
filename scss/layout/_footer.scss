@@ -1,0 +1,76 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.site-footer {
+  background: $color-bg-dark;
+  color: rgba($color-white, 0.85);
+  width: 100%;
+  margin: 0 auto;
+  padding: $space-2xl 1rem $space-lg;
+}
+.footer-grid {
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: grid;
+  gap: $space-xl;
+  margin-bottom: $space-xl;
+  @include respond-to(desktop) {
+    grid-template-columns: 2fr 1fr;
+    gap: $space-2xl;
+  }
+}
+
+.footer-brand .site-logo {
+  color: $color-white;
+  margin-bottom: $space-sm;
+}
+
+.footer-brand p {
+  color: rgba($color-white, 0.7);
+  font-size: 0.9375rem;
+  max-width: 280px;
+}
+
+.footer-nav h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba($color-white, 0.8);
+  margin-bottom: $space-md;
+}
+
+.footer-nav ul li {
+  margin-bottom: $space-xs;
+}
+
+.footer-nav a {
+  color: rgba($color-white, 0.85);
+  font-size: 0.9375rem;
+  transition: color $transition-fast;
+}
+
+.footer-nav a:hover {
+  color: $color-white;
+}
+
+.footer-bottom {
+  padding-top: $space-lg;
+  border-top: 1px solid rgba($color-white, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  @include respond-to(desktop) {
+    flex-direction: row;
+    justify-items: center;
+  }
+}
+
+.footer-bottom p {
+  color: rgba($color-white, 0.5);
+  font-size: 0.875rem;
+  margin: 0;
+}

@@ -1,0 +1,44 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.grid-1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-2xl;
+  justify-items: center;
+  @include respond-to(desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+.layout {
+  @extend %section-base;
+}
+
+.container {
+  @include container;
+}
+
+.section-white {
+  background: $color-white;
+}
+
+.grid-2_col {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-2xl;
+  justify-items: center;
+  align-items: center;
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: $space-3xl;
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $space-2xl;
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

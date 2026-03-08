@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="120.58mm"
+   height="120.58mm"
+   viewBox="0 0 120.58 120.58"
+   version="1.1"
+   id="svg1"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <linearGradient
+       id="linearGradient1060">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0.461418"
+         id="stop1060" />
+      <stop
+         style="stop-color:#7f7f7f;stop-opacity:1;"
+         offset="1"
+         id="stop1061" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient1057">
+      <stop
+         style="stop-color:#1ee402;stop-opacity:1;"
+         offset="0.35069051"
+         id="stop1058" />
+      <stop
+         style="stop-color:#002505;stop-opacity:1;"
+         offset="1"
+         id="stop1059" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient1057"
+       id="linearGradient1059"
+       x1="103.83895"
+       y1="2.1777284"
+       x2="134.9697"
+       y2="118.35923"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient1060"
+       id="linearGradient1061"
+       x1="98.68985"
+       y1="35.239471"
+       x2="142.13321"
+       y2="88.887558"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.99127154,0,0,1.1102442,-0.31256832,-7.5735684)" />
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-59.114358,0.02192214)">
+    <circle
+       style="fill:url(#linearGradient1059);fill-rule:nonzero;stroke:#000000;stroke-width:0.58;stroke-linecap:round;stroke-linejoin:miter;stroke-dasharray:none;stroke-dashoffset:0.928;stroke-opacity:0.418102;paint-order:markers fill stroke"
+       id="path1"
+       cx="119.40436"
+       cy="60.268078"
+       r="60" />
+    <path
+       id="path1051"
+       style="fill:url(#linearGradient1061);fill-opacity:1;stroke:#050505;stroke-width:2.008;stroke-linecap:round;stroke-dasharray:none;stroke-dashoffset:0.447998;stroke-opacity:1;paint-order:markers fill stroke"
+       d="m 144.86333,73.761799 c -3.43378,2.756113 -3.52112,31.052751 -12.30317,29.495851 -2.46608,-0.43719 -1.4574,-17.811076 -1.29434,-20.511755 0.16853,-2.791445 -6.8061,-9.492859 -11.72839,-9.52775 -4.78333,-0.0339 -11.58651,6.582594 -11.32941,9.52775 0.18924,2.167809 0.33948,20.138735 -2.13192,20.511755 -6.792769,1.0253 -10.715649,-27.623531 -12.762213,-29.495851 -10.298545,-9.421714 -12.362706,-49.183292 1.265098,-53.360548 12.636055,-3.873264 22.412425,4.172887 23.693005,4.269361 0.71664,0.054 13.02624,-7.693352 24.84648,-4.269361 13.70021,3.968576 12.39868,44.809294 1.74486,53.360548 z" />
+  </g>
+</svg>

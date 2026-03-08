@@ -1,0 +1,88 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.media-box {
+  aspect-ratio: 4 / 3;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: 0 24px 48px rgba($color-text, 0.1);
+  background: rgba($color-primary, 0.04);
+  position: relative;
+}
+  .media-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .flipped {
+  aspect-ratio: 3 / 4;
+}
+
+.media-with-caption {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  align-items: center;
+  text-align: center;
+}
+
+.media-caption {
+  font-size: 0.875rem;
+  color: $color-text-muted;
+  margin: 0;
+  font-style: italic;
+}
+
+.media-caption__tilde {
+  margin-right: 0.25em;
+  color: $color-primary;
+  font-style: normal;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: $color-primary;
+  background: rgba($color-primary, 0.1);
+  padding: 0.375rem 1.25rem;
+  border-radius: $radius-full;
+  border: 1px solid rgba($color-primary, 0.25);
+  margin-bottom: $space-sm;
+  transition: background $transition-fast, border-color $transition-fast;
+}
+
+.badge:hover {
+  background: rgba($color-primary, 0.15);
+  border-color: rgba($color-primary, 0.4);
+}
+
+.badge--outline {
+  background: transparent;
+  border: 1px solid rgba($color-primary, 0.4);
+}
+
+.badge--outline:hover {
+  background: rgba($color-primary, 0.06);
+}
+
+.subtitle {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $color-primary;
+  margin-bottom: $space-xs;
+}
+
+.content-box {
+  display: flex;
+  flex-direction: column;
+  gap: $space-lg;
+  text-align: center;
+}

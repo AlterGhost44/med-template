@@ -1,0 +1,53 @@
+@use 'variables' as *;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (min-width: $bp-mobile) { @content; }
+  } @else if $breakpoint == tablet {
+    @media (min-width: $bp-tablet) { @content; }
+  } @else if $breakpoint == desktop {
+    @media (min-width: $bp-desktop) { @content; }
+  } @else if $breakpoint == wide {
+    @media (min-width: $bp-wide) { @content; }
+  }
+}
+
+@mixin container {
+  width: 100%;
+  max-width: $bp-wide;
+  margin: 0 auto;
+  padding: $space-sm $space-sm;
+  @include respond-to(desktop) {
+    padding: $space-sm $space-xl;
+  }
+}
+
+@mixin section-padding {
+  padding: $space-2xl 0;
+  @include respond-to(desktop) {
+    padding: $space-3xl 0;
+  }
+}
+
+// Placeholder do @extend – wspólny padding sekcji (bez duplikacji w CSS)
+%section-base {
+  @include section-padding;
+}
+
+@mixin heading-style {
+  font-weight: 700;
+  line-height: 1.2;
+  color: $color-text;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

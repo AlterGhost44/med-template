@@ -1,0 +1,83 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-xs;
+  padding: $space-sm $space-lg;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: $radius-md;
+  transition: all $transition-base;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btn--primary {
+  background: $color-primary;
+  color: $color-white;
+  box-shadow: 0 4px 14px rgba($color-primary, 0.4);
+}
+
+.btn--primary:hover {
+  background: $color-primary-dark;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba($color-primary, 0.5);
+}
+
+// Przyciski kontaktu w nawigacji – jaśniejszy niebieski + biały tekst
+.btn--primary.nav-cta {
+  background: $color-primary-light;
+  color: $color-white;
+  box-shadow: 0 4px 14px rgba($color-primary-light, 0.35);
+}
+
+.btn--primary.nav-cta:hover {
+  background: $color-primary-light;
+  color: $color-white;
+  box-shadow: 0 6px 20px rgba($color-primary, 0.5);
+}
+
+.btn--accent {
+  background: $color-primary;
+  color: $color-white;
+  box-shadow: 0 4px 14px rgba($color-primary, 0.4);
+}
+
+.btn--accent:hover {
+  background: $color-primary-light;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba($color-primary, 0.5);
+}
+
+.btn--outline {
+  background: transparent;
+  color: $color-primary;
+  border: 2px solid $color-primary-dark;
+}
+
+.btn--outline:hover {
+  background: $color-primary-light;
+  color: $color-white;
+  transform: translateY(-2px);
+}
+
+.btn--large {
+  padding: $space-md $space-xl;
+  font-size: 1.125rem;
+  border-radius: $radius-lg;
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn--block-mobile {
+  width: 100%;
+  @include respond-to(desktop) {
+    width: auto;
+  }
+}

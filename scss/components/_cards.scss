@@ -1,0 +1,53 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.card {
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: $space-lg;
+  box-shadow: 0 4px 20px rgba($color-text, 0.06);
+  border: 1px solid rgba($color-text, 0.08);
+  transition: box-shadow $transition-base, transform $transition-base;
+  width: 100%;
+  @include respond-to(desktop) {
+    padding: $space-xl;
+  }
+}
+
+.card:hover {
+  box-shadow: 0 12px 40px rgba($color-text, 0.1);
+  transform: translateY(-4px);
+}
+
+.card__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($color-primary, 0.1);
+  color: $color-primary;
+  border-radius: $radius-md;
+  font-size: 1.5rem;
+  margin-bottom: $space-md;
+}
+
+.card h3 {
+  margin-bottom: $space-xs;
+}
+
+.card p {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.card--highlight {
+  border-color: $color-primary;
+  box-shadow: 0 4px 24px rgba($color-primary, 0.12);
+}
+
+.card--highlight .card__icon {
+  background: $color-primary;
+  color: $color-white;
+}
