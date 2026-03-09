@@ -6,11 +6,13 @@
   border-radius: $radius-lg;
   padding: $space-lg;
   box-shadow: 0 4px 20px rgba($color-text, 0.06);
-  border: 1px solid rgba($color-text, 0.08);
+  border: 1px solid rgba($color-text, 0.5);
   transition: box-shadow $transition-base, transform $transition-base;
   width: 100%;
+  gap: $space-lg;
   @include respond-to(desktop) {
     padding: $space-xl;
+    gap: $space-xl;
   }
 }
 

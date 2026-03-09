@@ -16,6 +16,16 @@
   cursor: pointer;
 }
 
+.split-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  @include respond-to(desktop) {
+    flex-direction: row;
+    gap: $space-xl;
+  }
+}
+
 .btn--primary {
   background: $color-primary;
   color: $color-white;

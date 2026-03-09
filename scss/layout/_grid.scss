@@ -8,10 +8,12 @@
   justify-items: center;
   @include respond-to(desktop) {
     grid-template-columns: 1fr;
+    gap: $space-3xl;
   }
 }
 .layout {
   @extend %section-base;
+  border: 1px solid rgba(78, 78, 78, 0.176);
 }
 
 .container {
@@ -22,7 +24,7 @@
   background: $color-white;
 }
 
-.grid-2_col {
+.grid-2 {
   display: grid;
   grid-template-columns: 1fr;
   gap: $space-2xl;
@@ -40,5 +42,6 @@
   gap: $space-2xl;
   @include respond-to(desktop) {
     grid-template-columns: repeat(3, 1fr);
+    gap: $space-3xl;
   }
 }
