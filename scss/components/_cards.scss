@@ -2,23 +2,32 @@
 @use '../mixins' as *;
 
 .card {
+  display: flex;
+  flex-direction: column;
   background: $color-white;
   border-radius: $radius-lg;
   padding: $space-lg;
   box-shadow: 0 4px 20px rgba($color-text, 0.06);
-  border: 1px solid rgba($color-text, 0.5);
+  border: 1px solid rgba($color-text, 0.15);
   transition: box-shadow $transition-base, transform $transition-base;
   width: 100%;
   gap: $space-lg;
   @include respond-to(desktop) {
     padding: $space-xl;
-    gap: $space-xl;
+    gap: $space-md;
   }
 }
 
 .card:hover {
   box-shadow: 0 12px 40px rgba($color-text, 0.1);
   transform: translateY(-4px);
+}
+
+.card img {
+  height: 50%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: $radius-lg;
 }
 
 .card__icon {

@@ -3,6 +3,7 @@
 
 .form-group {
   margin-bottom: $space-md;
+  max-width: 500px;
 }
 
 .form-label {
@@ -11,6 +12,7 @@
   font-size: 0.9375rem;
   color: $color-text;
   margin-bottom: $space-xs;
+  text-align: left;
 }
 
 .form-label .required {
@@ -27,6 +29,8 @@
   border-radius: $radius-md;
   background: $color-white;
   transition: border-color $transition-fast, box-shadow $transition-fast;
+  max-width: 500px;
+  text-align: left;
 }
 
 .form-input:focus,
